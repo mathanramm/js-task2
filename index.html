@@ -14,14 +14,27 @@
     />
   </head>
   <body>
+    <h1 id="title" align="center">Let us know who you are</h1>
     <form>
-      <div class="container">
+      <div class="container" id="formdiv">
         <div class="form-group">
-          <label for="first1">Enter First Name</label>
+          <label for="first">Enter First Name</label>
+
           <input
             type="text"
-            name=""
-            id="first1"
+            name="first_name"
+            id="first"
+            class="form-control"
+            placeholder="Enter Here"
+            aria-describedby="helpId"
+          />
+        </div>
+        <div id="lastname" class="form-group">
+          <label for="last">Enter Last Name</label>
+          <input
+            type="text"
+            name="last_name"
+            id="last"
             class="form-control"
             placeholder="Enter Here"
             aria-describedby="helpId"
