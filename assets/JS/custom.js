@@ -11,9 +11,7 @@ function getuserdata() {
   const first_name = document.getElementById("first_name").value;
   const last_name = document.getElementById("last_name").value;
   const state_name = document.getElementById("state").value;
-  const gender_value = document.querySelector(
-    'input[name="gender"]:checked'
-  ).value;
+
   // alert(gender_value);
   // const state_text = state_name.options[state_name.selectedIndex].text;
   // alert(state_text);
@@ -33,8 +31,12 @@ function getuserdata() {
     document.getElementById("state_name_error").style.color = "red";
     return false;
   }
-  if (gender_value == "") {
-    alert("gender value missing");
+  const gender_value = document.querySelector(
+    'input[name="gender"]:checked'
+  ).value;
+  if (gender_value != "m" && "f") {
+    ocument.getElementById("gender_error").innerHTML += "state missing";
+    document.getElementById("gender_error").style.color = "red";
   }
   // } else if (state_name == "tn") {
   //   // alert("Tamil Nadu");
